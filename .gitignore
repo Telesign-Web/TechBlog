@@ -15,12 +15,6 @@ themes/**
 # mu-plugins/**
 
 
-!themes/
-# !plugins/
-# !mu-plugins/
-themes/**
-# plugins/**
-# mu-plugins/**
 
 
 # Add two rules for each Theme or Plugin you want to include:
@@ -42,7 +36,7 @@ themes/**
 !wp-content/themes/twentytwentyone/
 !wp-content/themes/twentytwentyone/**
 
-!themes/ttwentytwentyone/
+!themes/twentytwentyone/
 !themes/twentytwentyone/**
 
 
