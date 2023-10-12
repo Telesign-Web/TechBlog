@@ -178,3 +178,20 @@ if ( ! class_exists( 'Twenty_Twenty_One_Customize' ) ) {
 		}
 	}
 }
+
+function register_custom_post_type() {
+    $args = array(
+        'public' => true,
+        'label' => 'Custom Filter Posts',
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'show_in_rest' => true,
+    );
+    register_post_type('custom_filter_post', $args);
+    
+    // Agregar taxonomía para categorizar
+    register_taxonomy('custom_filter_category', 'custom_filter_post', array(
+        'label' => 'Filter Categories',
+        'hierarchical' => true,
+    ));
+}
+add_action('init', 'register_custom_post_type');
